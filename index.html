@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacances</title>
+    <!-- <link rel="stylesheet" href="./index.css"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="./main.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="h-screen bg-gray-100">
+
+    <div class="flex flex-col justify-center items-center ">
+
+        <h1 class="text-center text-2xl font-bold  mb-8" id="title_principal"></h1>
+
+        <div class="flex justify-center w-full ">
+            <form class=" bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 mt-4" id="form">
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="annee">
+                        Saisir une année
+                    </label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-center"
+                        type="text" name="annee" id="annee" placeholder="Format YYYY">
+                </div>
+                <div class="flex justify-center">
+                    <button
+                        class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        id="btn_calendrier" name="btn_calendrier" type="submit">
+                        Calendrier
+                    </button>
+                </div>
+
+            </form>
+        </div>
+
+        <div id="visibility_calendar" class="flex flex-row flex-wrap justify-center gap-4 mt-8">
+        </div>
+
+    </div>
+</body>
+
+</html>
